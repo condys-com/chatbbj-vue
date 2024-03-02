@@ -69,22 +69,12 @@ function processResponse(res) {
   console.log(res.data[0]);
 }
 
-// function storeMessage(user, content) {
-//   axios.post('/api/add_message', {"user": user, "content": content})
-//       .then((res) => {
-//         processResponse(res)
-//       })
-//       .catch((err) => {
-//
-//       })
-// }
-
 function sendMessage() {
   if (input.value.trim() === '') {
     return;
   }
   pushMessage(true, input.value);
-  axios.post('http://localhost:5005/webhooks/rest/webhook', {
+  axios.post('https://www.condys.com/webhooks/rest/webhook', {
     "sender": Math.random().toString(),
     "message": input.value
   }).then((res) => {
