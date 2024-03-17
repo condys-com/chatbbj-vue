@@ -1,10 +1,10 @@
-<script setup>
-import ChatWindow from "@/components/ChatWindow.vue";
+<script setup lang="ts">
+import {RouterView} from "vue-router";
 </script>
 
 <template>
-  <ChatWindow/>
+  <router-view></router-view>
 </template>
 
-<style>
+<style scoped>
 </style>
